@@ -20,7 +20,7 @@ clean: build-clean config-clean
 
 build-clean:
 	$(info Cleaning build)
-	-@rm -rf $(BUILDDIR) mocks mockgen
+	-@rm -rf $(BUILDDIR)/* mocks mockgen
 	-@rm -rf $(TESTDIR)
 
 
