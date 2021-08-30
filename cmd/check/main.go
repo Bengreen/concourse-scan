@@ -16,7 +16,7 @@ limitations under the License.
 package main
 
 import (
-	"github.com/bengreen/doozer/cmd/in/cmd"
+	"github.com/bengreen/doozer/cmd/check/cmd"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module github.com/bengreene/doozer
+module github.com/bengreen/doozer
 
 go 1.17
 
