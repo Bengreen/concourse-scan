@@ -15,10 +15,8 @@ limitations under the License.
 */
 package main
 
-import "github.com/bengreene/doozer/cmd/in/cmd"
-
-var (
-	version string // Version number of build provided at compile time
+import (
+	"github.com/bengreene/doozer/cmd/in/cmd"
 )
 
 func main() {

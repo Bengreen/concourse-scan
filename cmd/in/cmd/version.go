@@ -18,6 +18,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/bengreene/doozer/config"
 	"github.com/spf13/cobra"
 )
 
@@ -32,10 +33,10 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("version: %s", version)
+		fmt.Printf("Version: %s\n", config.Version)
+		fmt.Printf("Buildtime: %s\n", config.BuildTime)
 	},
 }
-
 
 func init() {
 	rootCmd.AddCommand(versionCmd)

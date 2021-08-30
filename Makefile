@@ -2,7 +2,7 @@
 BUILDDIR?=$(PWD)/build
 TESTDIR?=$(PWD)/testout
 
-VERSION="1.2.1"
+VERSION=1.2.1
 
 TESTDIR=$(PWD)/testout
 
@@ -39,4 +39,4 @@ $(foreach prog,$(TARGET_NAMES),$(eval $(call GOFILES_t,$(prog))))
 
 
 $(TARGETS): $(BUILDDIR)/% : cmd/%/main.go
-	CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags '-X main.version=$(VERSION) -extldflags "-static"' -o $@ cmd/$*/*.go
+	CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X 'github.com/bengreene/doozer/config.Version=$(VERSION)' -extldflags '-static'" -o $@ cmd/$*/*.go
